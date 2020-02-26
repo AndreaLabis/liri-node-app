@@ -48,18 +48,18 @@ Each command produced different search results as listed below:
 ## "concert-this"
 This command used the Bands in Town Artist Events API. An **axios.get** command sent the search request and the results were logged to the console using moment to change the format of the returned date.
 
-![Image of concert-this](/images/concert.jpg)
+![Image of concert-this](/assets/images/concert.jpg)
 
 ## "spotify-this-song"
 This command used the Spotify request API. A **node-spotify-api spotify.request** command sent the search request and the results were logged to the console.
 
-![Image of spotify-this-song](/images/spotify-image.jpg)
+![Image of spotify-this-song](/assets/images/spotify-image.jpg)
   
   
 ## "movie-this"**
 This command used the OMBD API. An **axios.get** command sent the search request and the results were logged to the console.
 
-![Image of movie-this](/images/movie-image.jpg)
+![Image of movie-this](/assets/images/movie-image.jpg)
 
 
 ## "do-what-it-says"
