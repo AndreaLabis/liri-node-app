@@ -3,12 +3,12 @@ require("dotenv").config();
 //adding all global variables//
 var axios = require("axios");
 var moment = require("moment");
-var Spotify = require("node-spotify-api");
-var fs = require("fs");
+var Spotify = require('node-spotify-api');
+var fs = require('fs');
 var keys = require("./keys.js");
 var spotify = new Spotify(keys.spotify);
 var input = process.argv[2];
-var searchType = process.argv.splice(3).join(" ");
+var searchType = process.argv.splice(3).join();
 
 
 //user input commands//
@@ -30,23 +30,24 @@ else if (input === 'do-what-it-says'){
 }
 //this is to console log an error to the user//
 else {
-  console.log ("Please choose one of the given commands!");
+  console.log ('Please choose one of the given commands!');
 };
 
 
 //functions for "movie" user input//
 function movieThis(movie) {
-  var movieQuery = movie || "Mr.Nobody";
+  var movieQuery = movie || "Mr.Nobody"
+  http://www.omdbapi.com/?apikey=[yourkey]&
 
-  axios.get("http://www.ombdapi.com/?t=" + movieQuery + "&y=&plot=short&tomatoes=true&apikey=trilogy").then(function(response) {
+  axios.get("http://www.ombdapi.com/?&t=" + movieQuery + '&y=&plot=short&tomatoes=true&apikey=trilogy').then(function(response) {
 
     var divider = "\n-------------------------------------------------------------\n\n";
     var jsonData = response.data;
 
-    if (jsonData.Title != undefined){
-    }
-    else{
-    }
+     if (jsonData.title != undefined){
+     }
+     else{
+     }
 
     var movieData = [
       "Title: " = jsonData.Title,
@@ -66,10 +67,10 @@ function movieThis(movie) {
 };
 
 //function for "concert" user input//
-function concertThis(concert){
-  var concertQuery = concert || "'The Sign' by Ace of Base"
+function concertThis(artist){
+  //var concertQuery = concert
 
-  axios.get("https://rest.bandsintown.com/artists/" + concertQuery + "/events?app_id=codingbootcamp").then(function(response) {
+  axios.get("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp").then(function(response) {
     var jsonData = response.data;
 
     for (var i = 0; i < jsonData.length; i++) {
@@ -77,7 +78,7 @@ function concertThis(concert){
       var concertFind = [
         "\nVenue Name: " + jsonData[i].venue.name,
         "\nLocation: " + jsonData[i].venue.city,
-        "\nConcert Date: " + moment(jsonData[i].datetime).format("L"),
+        "\nConcert Date: " + moment(jsonData[i].datetime).format("MM/DD/YYYY"),
       ].join("\n\n")
      
     
@@ -150,7 +151,9 @@ function doWhatItSays() {
     }
 
   })
-}    
+}  
+
+}
 
 
 
