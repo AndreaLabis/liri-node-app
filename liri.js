@@ -9,9 +9,9 @@ var fs = require('fs');
 var keys = require("./keys.js");
 var spotify = new Spotify(keys.spotify);
 var userInput = process.argv;
-var inputTopic = process.argv[2];
+var input = process.argv[2];
 
-switch (inputTopic){
+switch (input){
     case "concert-this":
         bandInfo();
         break;
@@ -27,7 +27,7 @@ switch (inputTopic){
     case "do-what-it-says":
         doWhatInfo();
         break;
-};
+}
 
 
 function songInfo(){
@@ -60,8 +60,9 @@ function movieInfo(){
             movieName = movieName + "+" + userInput[i];
         }
         else{
-            movieName += userInput[i];
+            movieName += userInput[i]|| "Mr."
         }
+       
     }
     var queryURL = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
 

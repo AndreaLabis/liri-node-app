@@ -1,3 +1,1 @@
-spotify-this-song,"I Want it That Way"
-concert-this, 'Sia'
-movie-this, 'Mr. Nobody'
+spotify-this-song I Want it That Way

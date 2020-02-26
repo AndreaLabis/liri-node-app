@@ -13,21 +13,21 @@ The LIRI Bot was designed to produce search results based on the following comma
 
 Each command produced different search results as listed below:
 
-1) node liri.js concert-this “artist/band name” to include:
+## node liri.js concert-this “artist/band name” to include:
 
 * Name of venue
 * Venue location
 * Date of the event  (MM/DD/YYYY format)
 
 
-2) node liri.js spotify-this-song “song/track name” to include: 
+## node liri.js spotify-this-song “song/track name” to include: 
 
 * Artist
 * Song
 * Spotify song preview url
 * Album
 
-3) node liri.js movie-this “movie title” to include:
+## node liri.js movie-this “movie title” to include:
 
 * Title of the movie
 * Year the movie came out
@@ -38,24 +38,29 @@ Each command produced different search results as listed below:
 * Actors in the movie
 * Rotten Tomatoes Rating of the movie
 
-4) node liri.js do-what-it-says will:
+## node liri.js do-what-it-says will:
 
 * Print the results stored in the random.txt file 
 
+
 # Commands
 
-"concert-this"
-This command used the Bands in Town Artist Events API. An <axios.get> command sent the search request and the results were logged to the console using moment to change the format of the returned date.
+## "concert-this"
+This command used the Bands in Town Artist Events API. An **axios.get** command sent the search request and the results were logged to the console using moment to change the format of the returned date.
 
+![Image of concert-this]("./assets/images/concert image.jpg")
 
+## "spotify-this-song"
+This command used the Spotify request API. A **node-spotify-api spotify.request** command sent the search request and the results were logged to the console.
 
-"spotify-this-song"
-This command used the Spotify request API. A <node-spotify-api spotify.request> command sent the search request and the results were logged to the console.
+![Image of spotify-this-song]("./assets/images/spotify image.jpg")
   
   
-"movie-this"
-This command used the OMBD API. An <axios.get> command sent the search request and the results were logged to the console.
+## "movie-this"**
+This command used the OMBD API. An **axios.get** command sent the search request and the results were logged to the console.
+
+![Image of movie-this]("./assets/images/movie image.jpg")
 
 
-"do-what-it-says"
-This command pulled information from the local random.txt file.
+## "do-what-it-says"
+This command pulled information from the local **random.txt** file.
