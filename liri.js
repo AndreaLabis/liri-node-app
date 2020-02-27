@@ -49,6 +49,10 @@ function songInfo(){
     console.log("Song: " + songResponse.tracks.items[0].name);
     console.log("URL: " + songResponse.tracks.items[0].preview_url);
     console.log("Album: " + songResponse.tracks.items[0].album.name);
+
+    
+
+
 });
 };
 
@@ -60,7 +64,7 @@ function movieInfo(){
             movieName = movieName + "+" + userInput[i];
         }
         else{
-            movieName += userInput[i]|| "Mr."
+            movieName += userInput[i]
         }
        
     }
@@ -78,6 +82,7 @@ function movieInfo(){
         console.log("Rotten Tomatoes: " + movieResponse.data.Ratings[1].Value);
         }
     );
+
 };
 
 function bandInfo(){
@@ -99,10 +104,10 @@ function bandInfo(){
             console.log("Venue: " + bandResponse.data[0].venue.name);
             console.log("City: " + bandResponse.data[0].venue.city);
             console.log(moment(bandResponse.data[0].datetime).format("MM/DD/YYYY"));
-        }
-    );
+        });
     
 };
+
 
 
 
