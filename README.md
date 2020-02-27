@@ -65,4 +65,4 @@ This command used the OMBD API. An **axios.get** command sent the search request
 ## "do-what-it-says"
 This command pulled information from the local **random.txt** file.
 
-![Image of all commands](./assets/images/altogether.jpg)
+![Image of all commands](./assets/images/altogether%20.jpg)
