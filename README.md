@@ -1,6 +1,6 @@
-# liri-node-app
+# LIRI-node-app
 
-In this assignment, I made a LIRI bot. LIRI is a Language Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back the data you are searching for.
+In this assignment, I made a LIRI bot. LIRI is a Language Interpretation and Recognition Interface command line application. LIRI will take in parameters and send back the data for the songs, concerts or movies that the user is searching for, through the use of API calls.
 
 # Expected Outcomes
 
@@ -64,3 +64,5 @@ This command used the OMBD API. An **axios.get** command sent the search request
 
 ## "do-what-it-says"
 This command pulled information from the local **random.txt** file.
+
+![Image of all commands](./assets/images/altogether.jpg)
